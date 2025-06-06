@@ -17,7 +17,7 @@ Troubleshooting: Use and appropriate to analyse the DICOM file and discover inco
 
 **FileNotFound** - returns None and passes control back to the calling class or function, logging the error with the error type and file path that caused the error.
 
-**InvalidDicomError** - initially logs a warning to the user that file is not a valid DICOM file. After which the function attempts to force read the DICOM file to circumvent missing file header information. If successful, a warning is logged stating the file was successfully read, and a ‘FileDataset’ object is returned. If unsuccessful, the error is logged stating the file was not read with None returned and control passed back to the calling class or function. 
+**InvalidDicomError** - Displays message to user that DICOM file is invalid and could not be opened. Logs a warning that file is not a valid DICOM file or failed to load. After which the function attempts to force read the DICOM file to circumvent missing file header information. If successful, a warning is logged stating the file was successfully read, and a ‘FileDataset’ object is returned. If unsuccessful, the error is logged stating the file was not read with None returned and control passed back to the calling class or function. 
 
 **Exception** - logs error message stating that an unexpected error has occurred and simply returns None, passing control back to the calling class or function.
 
